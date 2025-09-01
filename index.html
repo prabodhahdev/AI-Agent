@@ -1,94 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Chat Widget</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Assistant</title>
   <style>
-    /* Floating Chat Button */
-    #chatBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #4f46e5;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 28px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-
-    #chatBtn:hover {
-      background-color: #3730a3;
-    }
-
-    /* Chat Modal */
-    #chatModal {
-      display: none;
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      width: 400px;
+    .assistant-frame {
+      width: 100%;
       height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      overflow: hidden;
-      z-index: 1000;
-      background: white;
-    }
-
-    /* Close Button inside modal */
-    #closeChat {
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      background: red;
-      color: white;
       border: none;
-      border-radius: 50%;
-      width: 25px;
-      height: 25px;
-      cursor: pointer;
-      font-weight: bold;
-      z-index: 1001;
+      border-radius: 12px; /* optional rounded corners */
     }
   </style>
 </head>
 <body>
-
-  <!-- Floating Chat Button -->
-  <button id="chatBtn">💬</button>
-
-  <!-- Chat Modal -->
-  <div id="chatModal">
-    <button id="closeChat">×</button>
-    <!-- Embedded AWS QBusiness AI -->
-    <iframe 
-      src="https://s3n1rtfg.chat.qbusiness.us-east-1.on.aws?code=7146afe2-5652-41e8-adbb-750176d05b09" 
-      width="100%" height="100%" style="border:none;">
-    </iframe>
-  </div>
-
-  <script>
-    const chatBtn = document.getElementById('chatBtn');
-    const chatModal = document.getElementById('chatModal');
-    const closeChat = document.getElementById('closeChat');
-
-    // Open chat modal
-    chatBtn.addEventListener('click', () => {
-      chatModal.style.display = 'block';
-    });
-
-    // Close chat modal
-    closeChat.addEventListener('click', () => {
-      chatModal.style.display = 'none';
-    });
-  </script>
-
+  <h2>AI Assistant</h2>
+  
+  <iframe 
+    class="assistant-frame"
+    src="https://3khnomrk.chat.qbusiness.us-east-1.on.aws?code=9d1d0f72-8ee1-41b4-ba4a-09837bfdaa05"
+    title="AI Assistant">
+  </iframe>
 </body>
 </html>
